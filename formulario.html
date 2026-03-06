@@ -5,10 +5,69 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Formulario</title>
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 <body>
-   <div>
+   <!-- POP UP -->
+   <div id="popup" class="popup-overlay" hidden>
+      <div class="popup-box">
+         <div class="popup-icon">
+            <i class="fa-solid fa-check"></i>
+         </div>
+         <h2>Proposta enviada!</h2>
+         <p>Recebi sua mensagem e entrarei em contato em breve. Obrigada! 💜</p>
+         <button class="popup-close" onclick="fecharPopup()">Fechar</button>
+      </div>
+   </div>
+
+
+   <!-- FORMULARIO  -->
+   <div class="card">
+      <div class="card-header">
+         <h1>Faça uma Proposta</h1>
+         <p>Preencha os campos e envie pelo canal de sua preferencia.</p>
+      </div>
+
+      <div class="inputs">
+         <label for="nome"><i class="fa-regular fa-user" style="margin-right: 6px;"></i>Nome</label>
+         <input type="text" id="nome" placeholder="Seu nome completo.">
+      </div>
+
+      <div class="inputs">
+         <label for="nome"><i class="fa-solid fa-mobile-screen" style="margin-right: 6px;"></i>Celular</label>
+         <input  type="tel" id="celular" placeholder="(99) 99999-9999">
+      </div>
+
+      <div class="inputs">
+         <label for="email"><i class="fa-regular fa-envelope" style="margin-right: 6px;"></i>Seu E-mail<span style="opacity: 0.4;margin-left: 6px;">(Opcional)</span></label>
+         <input type="email" id="email" placeholder="seuemailaqui@exemplo.com">
+      </div>
+
+      <div class="inputs">
+         <label for="descricao"><i class="fa-solid fa-pen-to-square" style="margin-right:6px;"></i>Descrição da proposta</label>
+         <textarea id="descricao" placeholder="Descreva sua ideia, projeto, ou proposta..."></textarea>
+      </div>
+
+      <!-- Alerta de preenchimento-->
+      <div id="alerta" hidden>
+         <i class="fa-solid fa-circle-exclamation"></i>
+         <span id="alerta-msg">Preencha nome e proposta antes de enviar.</span>
+      </div>
+
+      <!-- Botão para enviar -->
+      <div class="buttons">
+         <button id="btn-enviar" class="btn btn-enviar" onclick="enviar()">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span id="btn-txt">Enviar Proposta</span>
+         </button>
+      </div>
+      
+      <a href="index.html" class="back-link">Voltar para o inicio</a>
       
    </div>
+   <script src="config.js"></script> 
+   <script src="script.js"></script>
 </body>
 </html>
