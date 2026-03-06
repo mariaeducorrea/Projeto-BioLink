@@ -1,6 +1,6 @@
-const EMAILJS_PUBLIC_KEY  = "Yoc6c2qAjByJRCuLp";   // Account > API Keys
-const EMAILJS_SERVICE_ID  = "service_yuqj2cl";   // Email Services > Service ID
-const EMAILJS_TEMPLATE_ID = "template_f98jniw";  // Email Templates > Template ID
+const EMAILJS_PUBLIC_KEY  = "Yoc6c2qAjByJRCuLp";   // account > API Keys
+const EMAILJS_SERVICE_ID  = "service_yuqj2cl";   // email services > service ID
+const EMAILJS_TEMPLATE_ID = "template_f98jniw";  // email templates > template ID
 
 emailjs.init(config.EMAILJS_PUBLIC_KEY);
 
